@@ -1,8 +1,8 @@
 # Chatura Dissanayake - Graphic Designer Portfolio
 
-Welcome to my personal portfolio website! This project showcases my work as a Graphic Designer, including projects in branding, UI/UX, digital art, and data visualization.
+Welcome to my personal portfolio website! This project showcases my work as a Graphic Designer, including branding, UI/UX, digital art, and data visualization projects.
 
-![Portfolio Preview](https://github.com/chaturawtf/atakatus/raw/c778379ab3dca20a0f1376ee60e85cb12ddcb49a/assets/images/about/CHE_3884-scaled.jpg)
+![Portfolio Preview] (https://github.com/chaturawtf/atakatus/blob/e60b49e5bc5ee7787a91fe9fec45c694188f250d/assets/images/about/Website%20Preview.png)
 
 ## Table of Contents
 
