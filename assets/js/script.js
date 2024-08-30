@@ -40,6 +40,33 @@ Version      : 1.0
                 });
             }
 
+            const svg = document.getElementById("preloaderSvg");
+            const tl = gsap.timeline();
+            const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
+            const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
+
+            tl.to(".preloader-heading .load-text , .preloader-heading .cont", {
+                delay: 1.5,
+                y: -100,
+                opacity: 0,
+            });
+            tl.to(svg, {
+                duration: 0.5,
+                attr: { d: curve },
+                ease: "power2.easeIn",
+            }).to(svg, {
+                duration: 0.5,
+                attr: { d: flat },
+                ease: "power2.easeOut",
+            });
+            tl.to(".preloader", {
+                y: -1500,
+            });
+            tl.to(".preloader", {
+                zIndex: -1,
+                display: "none",
+            });
+
         });
 
         // HEADER STYLE JS
@@ -89,7 +116,7 @@ Version      : 1.0
         };
         magnifPopup();
 
-        // SCROOL TO UP JS
+        // SCROLL TO UP JS
         var progressPath = document.querySelector('.progress-wrap path');
         var pathLength = progressPath.getTotalLength();
         progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
@@ -278,11 +305,16 @@ Version      : 1.0
         if ($('.scroll-to-target').length) {
             $(".scroll-to-target").on('click', function() {
                 var targetSelector = $(this).attr('data-target');
-                var targetElement = $(targetSelector);
-                if (targetElement.length) {
-                    $('html, body').animate({
-                        scrollTop: targetElement.offset().top
-                    }, 1000);
+                try {
+                    // Ensure targetSelector is a valid selector and doesn't lead to XSS
+                    var targetElement = document.querySelector(targetSelector);
+                    if (targetElement) {
+                        $('html, body').animate({
+                            scrollTop: $(targetElement).offset().top
+                        }, 1000);
+                    }
+                } catch (e) {
+                    console.error('Invalid selector or malicious input detected:', e);
                 }
             });
         }
