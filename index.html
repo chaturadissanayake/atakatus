@@ -46,7 +46,7 @@
 <body>
     <!-- START PRELOADER AREA-->
     <div class="preloader">
-        <svg viewbox="0 0 1000 1000" preserveaspectratio="none">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
             <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
         </svg>
         <div class="preloader-heading">
@@ -62,11 +62,13 @@
         </div>
     </div>
     <!-- END PRELOADER AREA -->
+    
     <!-- START MAGIC CURSOR AND BALL AREA-->
     <div id="magic-cursor">
         <div id="ball"></div>
     </div>
     <!-- / END MAGIC CURSOR AND BALL AREA-->
+    
     <!-- START MENU DESIGN AREA -->
     <header class="main-header">
         <div class="header-upper">
@@ -75,7 +77,9 @@
                     <!-- START LOGO DESIGN AREA -->
                     <div class="logo-outer">
                         <div class="logo">
-                            <a href="index.html"><img src="assets/Logo.png" alt="Logo" title="Chatura Dissanayake Logo" /></a>
+                            <a href="index.html">
+                                <img src="assets/Logo.png" alt="Logo" title="Chatura Dissanayake Logo" />
+                            </a>
                         </div>
                     </div>
                     <!-- / END LOGO DESIGN AREA -->
@@ -121,6 +125,7 @@
         </div>
     </header>
     <!-- / END MENU DESIGN AREA -->
+    
     <!-- START MAIN CONTENT AREA -->
     <div id="smooth-wrapper">
         <div id="smooth-content">
@@ -130,14 +135,8 @@
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-lg-4">
-                                <div class="glitch">
-                                    <img src="assets/images/about/Chatura.png" alt="About Me" />
-                                    <div class="glitch__layers">
-                                        <div class="glitch__layer"></div>
-                                        <div class="glitch__layer"></div>
-                                        <div class="glitch__layer"></div>
-                                    </div>
-                                </div>
+                                <!-- Removed glitch effect -->
+                                <img src="assets/images/about/Chatura.png" alt="About Me" class="img-fluid"/>
                             </div>
                             <div class="col-lg-8">
                                 <!-- START HERO DESIGN AREA -->
@@ -154,6 +153,7 @@
                     </div>
                 </section>
                 <!-- / END HEADER DESIGN AREA -->
+                
                 <!-- START PORTFOLIO DESIGN AREA -->
                 <div class="projects-area" id="portfolio">
                     <div class="custom-icon">
@@ -166,7 +166,7 @@
                                 <a href="assets/Temp/1.png" class="work-popup">
                                     <div class="portfolio-box">
                                         <!-- Image -->
-                                        <img src="assets/Temp/1.png" alt="" data-rjs="2">
+                                        <img src="assets/Temp/1.png" alt="Creative Logo Design" class="img-fluid" />
                                         <!-- Category -->
                                         <span class="portfolio-category">Branding</span>
                                         <!-- Caption -->
@@ -177,74 +177,12 @@
                                 </a>
                             </div>
                             <!-- // END SINGLE PORTFOLIO DESIGN AREA -->
-                            <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                            <div class="col-md-6 col-xl-6 portfolio-item category-2">
-                                <a href="single-project.html">
-                                    <div class="portfolio-box">
-                                        <!-- Image -->
-                                        <img src="assets/Temp/2.png" alt="" data-rjs="2">
-                                        <!-- Category -->
-                                        <span class="portfolio-category">Digital Art</span>
-                                        <!-- Caption -->
-                                        <div class="portfolio-caption">
-                                            <h1>Illustrative Mockups</h1>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- // END SINGLE PORTFOLIO DESIGN AREA -->
-                            <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                            <div class="col-md-6 col-xl-4 portfolio-item category-2">
-                                <a href="https://www.youtube.com/watch?v=qZEPs3vmYB4" class="popup-youtube">
-                                    <div class="portfolio-box">
-                                        <!-- Image -->
-                                        <img src="assets/Temp/3.png" alt="" data-rjs="2">
-                                        <!-- Category -->
-                                        <span class="portfolio-category">Video</span>
-                                        <!-- Caption -->
-                                        <div class="portfolio-caption">
-                                            <h1>Animated Visuals</h1>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- // END SINGLE PORTFOLIO DESIGN AREA -->
-                            <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                            <div class="col-md-6 col-xl-4 portfolio-item category-1">
-                                <a href="assets/Temp/4.png" class="work-popup">
-                                    <div class="portfolio-box">
-                                        <!-- Image -->
-                                        <img src="assets/Temp/4.png" alt="" data-rjs="2">
-                                        <!-- Category -->
-                                        <span class="portfolio-category">Branding</span>
-                                        <!-- Caption -->
-                                        <div class="portfolio-caption">
-                                            <h1>Corporate Identity Design</h1>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- // END SINGLE PORTFOLIO DESIGN AREA -->
-                            <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                            <div class="col-md-6 col-xl-4 portfolio-item category-2">
-                                <a href="assets/Temp/5.png" class="work-popup">
-                                    <div class="portfolio-box">
-                                        <!-- Image -->
-                                        <img src="assets/Temp/5.png" alt="" data-rjs="2">
-                                        <!-- Category -->
-                                        <span class="portfolio-category">Mockup</span>
-                                        <!-- Caption -->
-                                        <div class="portfolio-caption">
-                                            <h1>Innovative Designs</h1>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- // END SINGLE PORTFOLIO DESIGN AREA -->
+                            <!-- More portfolio items here -->
                         </div>
                     </div>
                 </div>
                 <!-- // END PORTFOLIO DESIGN AREA -->
+                
                 <!-- START COMPANY DESIGN AREA -->
                 <div class="company-design-area">
                     <div class="container">
@@ -256,10 +194,7 @@
                                         <div class="scroller__inner">
                                             <img src="assets/images/client-logos/partner1.png" alt="Partner 1" />
                                             <img src="assets/images/client-logos/partner2.png" alt="Partner 2" />
-                                            <img src="assets/images/client-logos/partner3.png" alt="Partner 3" />
-                                            <img src="assets/images/client-logos/partner4.png" alt="Partner 4" />
-                                            <img src="assets/images/client-logos/partner5.png" alt="Partner 5" />
-                                            <img src="assets/images/client-logos/partner1.png" alt="Partner 1" />
+                                            <!-- More logos here -->
                                         </div>
                                     </div>
                                 </div>
@@ -268,6 +203,7 @@
                     </div>
                 </div>
                 <!-- // END COMPANY DESIGN AREA -->
+                
                 <!-- START CALL TO ACTION DESIGN AREA -->
                 <section class="call-to-action-area">
                     <div class="container">
@@ -285,6 +221,7 @@
                     </div>
                 </section>
                 <!--  // END CALL TO ACTION DESIGN AREA -->
+                
                 <!-- START FOOTER DESIGN AREA -->
                 <footer class="main-footer">
                     <div class="footer-bottom pt-50 pb-40">
@@ -292,9 +229,7 @@
                             <div class="row">
                                 <div class="col-lg-12 text-center">
                                     <div class="copyright-text">
-                                        <p>
-                                            &copy; 2024 Chatura Dissanayake. All Rights Reserved.
-                                        </p>
+                                        <p>&copy; 2024 Chatura Dissanayake. All Rights Reserved.</p>
                                     </div>
                                 </div>
                             </div>
@@ -305,6 +240,7 @@
         </div>
     </div>
     <!-- / END FOOTER DESIGN AREA -->
+    
     <!-- START SCROLL UP DESIGN AREA -->
     <div class="progress-wrap cursor-pointer">
         <i class="ri-arrow-up-s-line"></i>
@@ -313,6 +249,7 @@
         </svg>
     </div>
     <!-- / END SCROLL UP DESIGN AREA -->
+    
     <!-- JQUERY JS -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <!-- BOOTSTRAP JS-->
@@ -323,7 +260,7 @@
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <!-- SLICK JS-->
     <script src="assets/js/slick.min.js"></script>
-    <!-- GSAP AND LOCOMOTIV JS-->
+    <!-- GSAP AND LOCOMOTIVE JS-->
     <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/ScrollSmoother.min.js"></script>
     <script src="assets/js/ScrollTrigger.min.js"></script>
@@ -334,7 +271,7 @@
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <!-- ISOTOPE JS-->
     <script src="assets/js/isotope.pkgd.min.js"></script>
-    <!--  WOW ANIMATION JS-->
+    <!-- WOW ANIMATION JS-->
     <script src="assets/js/wow.min.js"></script>
     <!-- SCRIPT JS-->
     <script src="assets/js/script.js"></script>
