@@ -46,7 +46,7 @@
 <body>
     <!-- START PRELOADER AREA-->
     <div class="preloader">
-        <svg viewbox="0 0 1000 1000" preserveaspectratio="none">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
             <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
         </svg>
         <div class="preloader-heading">
@@ -62,14 +62,13 @@
         </div>
     </div>
     <!-- END PRELOADER AREA -->
+    
     <!-- START MAGIC CURSOR AND BALL AREA-->
     <div id="magic-cursor">
         <div id="ball"></div>
     </div>
-    <div id="magic-cursor">
-        <div id="ball"></div>
-    </div>
     <!-- / END MAGIC CURSOR AND BALL AREA-->
+    
     <!-- START MENU DESIGN AREA -->
     <header class="main-header">
         <div class="header-upper">
@@ -78,7 +77,9 @@
                     <!-- START LOGO DESIGN AREA -->
                     <div class="logo-outer">
                         <div class="logo">
-                            <a href="index.html"><assets/Logo.png" alt="Logo" title="Logo" /></a>
+                            <a href="index.html">
+                                <img src="assets/Logo.png" alt="Logo" title="Logo" />
+                            </a>
                         </div>
                     </div>
                     <!-- / END LOGO DESIGN AREA -->
@@ -102,9 +103,9 @@
                             <div class="navbar-collapse collapse">
                                 <ul class="navigation clearfix">
                                     <li><a class="nav-link-click" href="index.html">Home</a></li>
-                                    <li><a class="nav-link-click" href="about.html">about</a></li>
+                                    <li><a class="nav-link-click" href="about.html">About</a></li>
                                     <li><a class="nav-link-click" href="projects.html">Projects</a></li>
-                                    <li><a class="nav-link-click" href="blog.html">blog</a></li>
+                                    <li><a class="nav-link-click" href="blog.html">Blog</a></li>
                                     <li><a class="nav-link-click" href="contact.html">Contact</a></li>
                                 </ul>
                             </div>
@@ -113,10 +114,10 @@
                     </div>
                     <div class="about-social text-center">
                         <ul>
-                            <li><a href=""><i class="ri-facebook-circle-fill"></i></a></li>
-                            <li><a href=""><i class="ri-twitter-x-line"></i></a></li>
-                            <li><a href=""><i class="ri-linkedin-fill"></i></a></li>
-                            <li><a href=""><i class="ri-github-line"></i></a></li>
+                            <li><a href="#"><i class="ri-facebook-circle-fill"></i></a></li>
+                            <li><a href="#"><i class="ri-twitter-x-line"></i></a></li>
+                            <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
+                            <li><a href="#"><i class="ri-github-line"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -124,7 +125,7 @@
         </div>
     </header>
     <!-- / END MENU DESIGN AREA -->
-    <!-- START MENU DESIGN AREA -->
+
     <div id="smooth-wrapper">
         <div id="smooth-content">
             <main class="main-bg o-hidden">
@@ -140,6 +141,7 @@
                     </div>
                 </section>
                 <!-- / END HEADER DESIGN AREA -->
+                
                 <!-- START CONTACT DESIGN AREA -->
                 <section id="contact" class="contact-area">
                     <div class="container">
@@ -158,7 +160,7 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="name">Full Name</label>
-                                                        <input type="text" id="name" name="name" class="form-control" value="" placeholder="Steve Milner" required="" data-error="Please enter your Name" />
+                                                        <input type="text" id="name" name="name" class="form-control" placeholder="Steve Milner" required data-error="Please enter your Name" />
                                                         <label for="name" class="for-icon"><i class="far fa-user"></i></label>
                                                         <div class="help-block with-errors"></div>
                                                     </div>
@@ -166,7 +168,7 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="email">Email Address</label>
-                                                        <input type="email" id="email" name="email" class="form-control" value="" placeholder="hello@websitename.com" required="" data-error="Please enter your Email" />
+                                                        <input type="email" id="email" name="email" class="form-control" placeholder="hello@websitename.com" required data-error="Please enter your Email" />
                                                         <label for="email" class="for-icon"><i class="far fa-envelope"></i></label>
                                                         <div class="help-block with-errors"></div>
                                                     </div>
@@ -174,7 +176,7 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label for="message">Your Message</label>
-                                                        <textarea name="message" id="message" class="form-control" rows="4" placeholder="Write Your message" required="" data-error="Please Write your Message"></textarea>
+                                                        <textarea name="message" id="message" class="form-control" rows="4" placeholder="Write Your message" required data-error="Please Write your Message"></textarea>
                                                         <div class="help-block with-errors"></div>
                                                     </div>
                                                 </div>
@@ -196,6 +198,7 @@
                     </div>
                 </section>
                 <!-- / END CONTACT DESIGN AREA -->
+                
                 <!-- START FOOTER DESIGN AREA -->
                 <footer class="main-footer">
                     <div class="footer-bottom pt-50 pb-40">
@@ -203,27 +206,28 @@
                             <div class="row">
                                 <div class="col-lg-12 text-center">
                                     <div class="copyright-text">
-                                        <p>
-                                            &copy; 2024 Chatura Dissanayake. All Rights Reserved.
-                                        </p>
+                                        <p>&copy; 2024 Chatura Dissanayake. All Rights Reserved.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </footer>
+                <!-- / END FOOTER DESIGN AREA -->
+                
             </main>
         </div>
     </div>
-    <!-- / END FOOTER DESIGN AREA -->
-    <!-- START SCROOL UP DESIGN AREA -->
+    
+    <!-- START SCROLL UP DESIGN AREA -->
     <div class="progress-wrap cursor-pointer">
         <i class="ri-arrow-up-s-line"></i>
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
     </div>
-    <!-- / END SCROOL UP DESIGN AREA -->
+    <!-- / END SCROLL UP DESIGN AREA -->
+    
     <!-- JQUERY JS -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <!-- BOOTSTRAP JS-->
@@ -234,7 +238,7 @@
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <!-- SLICK JS-->
     <script src="assets/js/slick.min.js"></script>
-    <!-- GSAP AND LOCOMOTIV JS-->
+    <!-- GSAP AND LOCOMOTIVE JS-->
     <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/ScrollSmoother.min.js"></script>
     <script src="assets/js/ScrollTrigger.min.js"></script>
@@ -245,10 +249,38 @@
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <!-- ISOTOPE JS-->
     <script src="assets/js/isotope.pkgd.min.js"></script>
-    <!--  WOW ANIMATION JS-->
+    <!-- WOW ANIMATION JS-->
     <script src="assets/js/wow.min.js"></script>
     <!-- SCRIPT JS-->
     <script src="assets/js/script.js"></script>
+
+    <!-- CUSTOM SCRIPT FOR FORM SUBMISSION -->
+    <script>
+        $(document).ready(function () {
+            $("#contactForm").on("submit", function (event) {
+                event.preventDefault(); // Prevent default form submission
+                
+                var formData = $(this).serialize(); // Serialize form data
+
+                $.ajax({
+                    type: "POST",
+                    url: "assets/php/form-process.php", // The PHP file that handles form submission
+                    data: formData,
+                    success: function (response) {
+                        if (response.trim() == "success") {
+                            $("#msgSubmit").removeClass("hidden").html("Message sent successfully!");
+                            $("#contactForm")[0].reset(); // Reset the form after successful submission
+                        } else {
+                            $("#msgSubmit").removeClass("hidden").html("There was an error sending your message. Please try again later.");
+                        }
+                    },
+                    error: function () {
+                        $("#msgSubmit").removeClass("hidden").html("There was an error sending your message. Please try again later.");
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
