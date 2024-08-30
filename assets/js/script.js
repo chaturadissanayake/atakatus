@@ -6,66 +6,43 @@ Version      : 1.0
 * ----------------------------------------------------------------------------------------
 */
 
-
 (function($) {
 
     "use strict";
 
     $(document).ready(function() {
 
-
-
-        /*
-         * ----------------------------------------------------------------------------------------
-         *  EXTRA JS
-         * ----------------------------------------------------------------------------------------
-         */
-
+        // EXTRA JS
         $('.nav-link-click').click(function() {
             $('.navbar-collapse').collapse('hide');
         });
 
-        /*
-         * ----------------------------------------------------------------------------------------
-         *  PRELOADER JS & DOCUMENT LOAD JS
-         * ----------------------------------------------------------------------------------------
-         */
-
+        // PRELOADER JS & DOCUMENT LOAD JS
         $(window).on('load', function() {
-
             $('.loader').fadeOut();
             $('#preloader-area').delay(350).fadeOut('slow');
 
-
-            // ## Project Filtering
+            // Project Filtering
             if ($('.project-masonry-active').length) {
                 $(this).imagesLoaded(function() {
                     $('.project-masonry-active').isotope({
-                        // options
                         itemSelector: '.item',
                     });
                 });
             }
 
-
-            // ## Blog Standard
+            // Blog Standard
             if ($('.blog-standard-wrap').length) {
                 $(this).imagesLoaded(function() {
                     $('.blog-standard-wrap').isotope({
-                        // options
                         itemSelector: '.item',
                     });
                 });
             }
 
-
         });
 
-        /*
-         * ----------------------------------------------------------------------------------------
-         *  HEADER STYLE JS
-         * ----------------------------------------------------------------------------------------
-         */
+        // HEADER STYLE JS
         function headerStyle() {
             if ($('.main-header').length) {
                 var windowpos = $(window).scrollTop();
@@ -82,12 +59,7 @@ Version      : 1.0
         }
         headerStyle();
 
-        /*
-         * ----------------------------------------------------------------------------------------
-         *  MAGNIFIC POPUP JS
-         * ----------------------------------------------------------------------------------------
-         */
-
+        // MAGNIFIC POPUP JS
         var magnifPopup = function() {
             $('.work-popup').magnificPopup({
                 type: 'image',
@@ -97,22 +69,14 @@ Version      : 1.0
                     enabled: true
                 },
                 zoom: {
-                    enabled: false, // By default it's false, so don't forget to enable it
-
-                    duration: 300, // duration of the effect, in milliseconds
-                    easing: 'ease-in-out', // CSS transition easing function
-
-                    // The "opener" function should return the element from which popup will be zoomed in
-                    // and to which popup will be scaled down
-                    // By defailt it looks for an image tag:
+                    enabled: false,
+                    duration: 300,
+                    easing: 'ease-in-out',
                     opener: function(openerElement) {
-                        // openerElement is the element on which popup was initialized, in this case its <a> tag
-                        // you don't need to add "opener" option if this code matches your needs, it's defailt one.
                         return openerElement.is('img') ? openerElement : openerElement.find('img');
                     }
                 }
             });
-
 
             $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
                 disableOn: 700,
@@ -120,22 +84,12 @@ Version      : 1.0
                 mainClass: 'mfp-fade',
                 removalDelay: 160,
                 preloader: false,
-
                 fixedContentPos: false
             });
-
         };
-        // Call the functions 
         magnifPopup();
 
-
-
-        /*
-         * ----------------------------------------------------------------------------------------
-         *  SCROOL TO UP JS
-         * ----------------------------------------------------------------------------------------
-         */
-
+        // SCROOL TO UP JS
         var progressPath = document.querySelector('.progress-wrap path');
         var pathLength = progressPath.getTotalLength();
         progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
@@ -166,31 +120,18 @@ Version      : 1.0
                 scrollTop: 0
             }, duration);
             return false;
-        })
+        });
 
-        /* ==========================================================================
-                   SCROLLER ANIMATION
-                   ========================================================================== */
-
+        // SCROLLER ANIMATION
         const scrollers = document.querySelectorAll(".scroller");
-
-        // If a user hasn't opted in for recuded motion, then we add the animation
         if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             addAnimation();
         }
-
         function addAnimation() {
             scrollers.forEach((scroller) => {
-                // add data-animated="true" to every `.scroller` on the page
                 scroller.setAttribute("data-animated", true);
-
-                // Make an array from the elements within `.scroller-inner`
                 const scrollerInner = scroller.querySelector(".scroller__inner");
                 const scrollerContent = Array.from(scrollerInner.children);
-
-                // For each item in the array, clone it
-                // add aria-hidden to it
-                // add it into the `.scroller-inner`
                 scrollerContent.forEach((item) => {
                     const duplicatedItem = item.cloneNode(true);
                     duplicatedItem.setAttribute("aria-hidden", true);
@@ -199,61 +140,44 @@ Version      : 1.0
             });
         }
 
-
-
-
-        /*
-         * ----------------------------------------------------------------------------------------
-         *  CUSTOM CURSOR JS
-         * ----------------------------------------------------------------------------------------
-         */
+        // CUSTOM CURSOR JS
         const cursorBall = document.getElementById('ball');
-
         document.addEventListener('mousemove', function(e) {
-            // Update cursor position and opacity on mousemove
             gsap.to(cursorBall, {
                 duration: 0.3,
                 x: e.clientX,
                 y: e.clientY,
-                opacity: 1, // Ensure cursor is visible
+                opacity: 1,
                 ease: 'power2.out'
             });
         });
 
-        // Hover effect on elements
         const hoverElements = document.querySelectorAll('a');
         hoverElements.forEach(function(element) {
             element.addEventListener('mouseenter', function() {
-                // Animate cursorBall on mouseenter
                 cursorBall.classList.add('hovered');
                 gsap.to(cursorBall, {
                     duration: 0.3,
-                    scale: 2, // Increase scale
-                    opacity: 0, // Set opacity to 0
+                    scale: 2,
+                    opacity: 0,
                     ease: 0.1
                 });
             });
 
             element.addEventListener('mouseleave', function() {
-                // Restore cursorBall on mouseleave
                 cursorBall.classList.remove('hovered');
                 gsap.to(cursorBall, {
                     duration: 0.3,
-                    scale: 1, // Restore scale to normal
-                    opacity: 1, // Restore opacity
+                    scale: 1,
+                    opacity: 1,
                     ease: 'power2.out'
                 });
             });
         });
 
-        /*
-         * ----------------------------------------------------------------------------------------
-         *  DROPDOWN MENU JS
-         * ----------------------------------------------------------------------------------------
-         */
+        // DROPDOWN MENU JS
         var mobileWidth = 992;
         var navcollapse = $('.navigation li.dropdown');
-
         navcollapse.hover(function() {
             if ($(window).innerWidth() >= mobileWidth) {
                 $(this).children('ul').stop(true, false, true).slideToggle(300);
@@ -261,32 +185,25 @@ Version      : 1.0
             }
         });
 
-        // ## Submenu Dropdown Toggle
         if ($('.main-header .navigation li.dropdown ul').length) {
             $('.main-header .navigation li.dropdown').append('<div class="dropdown-btn"><span class="fas fa-chevron-down"></span></div>');
-
-            //Dropdown Button
             $('.main-header .navigation li.dropdown .dropdown-btn').on('click', function() {
                 $(this).prev('ul').slideToggle(500);
                 $(this).prev('.megamenu').slideToggle(800);
             });
 
-            //Disable dropdown parent link
             $('.navigation li.dropdown > a').on('click', function(e) {
                 e.preventDefault();
             });
         }
 
-        // Submenu Dropdown Toggle
         if ($('.main-header .main-menu').length) {
             $('.main-header .main-menu .navbar-toggle').click(function() {
                 $(this).prev().prev().next().next().children('li.dropdown').hide();
             });
         }
 
-
-
-        // ## Testimonials Active
+        // Testimonials Active
         if ($('.testimonials-wrap').length) {
             $('.testimonials-wrap').slick({
                 dots: false,
@@ -309,9 +226,7 @@ Version      : 1.0
             });
         }
 
-
-
-        // ## Project Filter
+        // Project Filter
         $(".project-filter li").on('click', function() {
             $(".project-filter li").removeClass("current");
             $(this).addClass("current");
@@ -329,12 +244,9 @@ Version      : 1.0
 
         });
 
-
-
-        /* ## Fact Counter + Text Count - Our Success */
+        // Fact Counter + Text Count - Our Success
         if ($('.counter-text-wrap').length) {
             $('.counter-text-wrap').appear(function() {
-
                 var $t = $(this),
                     n = $t.find(".count-text").attr("data-stop"),
                     r = parseInt($t.find(".count-text").attr("data-speed"), 10);
@@ -362,87 +274,57 @@ Version      : 1.0
             });
         }
 
-
-
-        // ## Scroll to Top
+        // Scroll to Top
         if ($('.scroll-to-target').length) {
             $(".scroll-to-target").on('click', function() {
-                var target = $(this).attr('data-target');
-                // animate
-                $('html, body').animate({
-                    scrollTop: $(target).offset().top
-                }, 1000);
-
+                var targetSelector = $(this).attr('data-target');
+                var targetElement = $(targetSelector);
+                if (targetElement.length) {
+                    $('html, body').animate({
+                        scrollTop: targetElement.offset().top
+                    }, 1000);
+                }
             });
         }
 
-
-        // ## Nice Select
+        // Nice Select
         $('select').niceSelect();
 
-
-        // ## WOW Animation
+        // WOW Animation
         if ($('.wow').length) {
             var wow = new WOW({
-                boxClass: 'wow', // animated element css class (default is wow)
-                animateClass: 'animated', // animation css class (default is animated)
-                offset: 0, // distance to the element when triggering the animation (default is 0)
-                mobile: false, // trigger animations on mobile devices (default is true)
-                live: true // act on asynchronously loaded content (default is true)
+                boxClass: 'wow',
+                animateClass: 'animated',
+                offset: 0,
+                mobile: false,
+                live: true
             });
             wow.init();
         }
 
-
     });
-
 
     /* ==========================================================================
        When document is resize, do
        ========================================================================== */
-
     $(window).on('resize', function() {
         var mobileWidth = 992;
         var navcollapse = $('.navigation li.dropdown');
         navcollapse.children('ul').hide();
         navcollapse.children('.megamenu').hide();
-
     });
-
 
     /* ==========================================================================
        When document is scroll, do
        ========================================================================== */
-
     $(window).on('scroll', function() {
-
-        // ## Header Style and Scroll to Top
-        function headerStyle() {
-            if ($('.main-header').length) {
-                var windowpos = $(window).scrollTop();
-                var siteHeader = $('.main-header');
-                var scrollLink = $('.scroll-top');
-                if (windowpos >= 100) {
-                    siteHeader.addClass('fixed-header');
-                    scrollLink.fadeIn(300);
-                } else {
-                    siteHeader.removeClass('fixed-header');
-                    scrollLink.fadeOut(300);
-                }
-            }
-        }
-
         headerStyle();
-
     });
 
-    
     /* ==========================================================================
        When document is loaded, do
        ========================================================================== */
-
     $(window).on('load', function() {
-
         const svg = document.getElementById("preloaderSvg");
         const tl = gsap.timeline();
         const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
@@ -469,15 +351,6 @@ Version      : 1.0
             zIndex: -1,
             display: "none",
         });
-
-
-
     });
-
-
-
-
-
-    
 
 })(window.jQuery);
