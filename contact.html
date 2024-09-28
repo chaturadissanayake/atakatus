@@ -155,7 +155,8 @@
                                         <li><i class="ri-mail-open-line"></i>Email: chaturawtf@mail.com</li>
                                     </ul>
                                     <div class="contact-form contact-form-area wow fadeInUp delay-0-4s">
-                                        <form id="contactForm" class="contactForm" name="contactForm" action="assets/php/form-process.php" method="post">
+                                        <!-- Update the form action to use the Google Apps Script web app URL -->
+                                        <form id="contactForm" class="contactForm" name="contactForm" action="https://script.google.com/macros/s/AKfycbwl40gycmUm8TwKQ_pgx9QsO61QFOFvRIzkzoEFuQgdpGP_ifPaldUOJWeFf-qNAVT1/exec" method="POST">
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
@@ -264,10 +265,10 @@
 
                 $.ajax({
                     type: "POST",
-                    url: "assets/php/form-process.php", // The PHP file that handles form submission
+                    url: "https://script.google.com/macros/s/AKfycbwl40gycmUm8TwKQ_pgx9QsO61QFOFvRIzkzoEFuQgdpGP_ifPaldUOJWeFf-qNAVT1/exec", // Google Apps Script Web App URL
                     data: formData,
                     success: function (response) {
-                        if (response.trim() == "success") {
+                        if (response.trim() == "Success") {
                             $("#msgSubmit").removeClass("hidden").html("Message sent successfully!");
                             $("#contactForm")[0].reset(); // Reset the form after successful submission
                         } else {
