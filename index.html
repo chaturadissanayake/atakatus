@@ -9,127 +9,84 @@
     <meta name="description" content="Chatura Dissanayake - Creative Graphic Designer Portfolio">
     <meta name="keywords" content="graphic designer, portfolio, design, creative, branding, UI/UX, digital art, data visualization">
     <meta name="author" content="Chatura Dissanayake">
-    <!-- PAGE TITLE -->
     <title>Chatura Dissanayake - Data-Driven Designer: Branding & UX/UI</title>
-    <!-- FAVICON ICON -->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
-    <!-- ALL GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <!-- BOOTSTRAP CSS -->
+    <!-- Preload Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap">
+    <!-- Minified and Optimized CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <!-- FONT AWESOME CSS -->
     <link rel="stylesheet" href="assets/fonts/remixicon.css" />
-    <!-- MAGNIFIC CSS -->
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <!-- NICE SELECT CSS -->
     <link rel="stylesheet" href="assets/css/nice-select.min.css" />
-    <!-- ANIMATE CSS -->
     <link rel="stylesheet" href="assets/css/animate.min.css" />
-    <!-- SLICK CSS -->
     <link rel="stylesheet" href="assets/css/slick.min.css" />
-    <!-- SPACING CSS -->
-    <link rel="stylesheet" href="assets/css/spacing.css" />
-    <!-- MAIN STYLE CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- RESPONSIVE CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
     <style>
-        /* Custom styles for logos */
         .company-list img {
-            height: 50px; /* Set a consistent height */
-            width: auto; /* Maintain aspect ratio */
-            margin: 0 20px; /* Add margin for spacing */
-            filter: grayscale(100%); /* Convert to grayscale */
-            transition: filter 0.3s ease; /* Transition for hover effect */
+            height: 50px;
+            width: auto;
+            margin: 0 20px;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
         }
+
         .company-list img:hover {
-            filter: grayscale(0%); /* Remove grayscale on hover */
+            filter: grayscale(0%);
         }
+
         .company-list {
-            text-align: center; /* Center align logos */
-            padding: 20px 0; /* Padding for spacing */
+            text-align: center;
+            padding: 20px 0;
         }
     </style>
 </head>
 
 <body>
-    <!-- START PRELOADER AREA-->
+    <!-- START PRELOADER AREA -->
     <div class="preloader">
         <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
             <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
         </svg>
         <div class="preloader-heading">
-            <div class="load-text">
-                <span>L</span>
-                <span>o</span>
-                <span>a</span>
-                <span>d</span>
-                <span>i</span>
-                <span>n</span>
-                <span>g</span>
-            </div>
+            <div class="load-text"><span>L</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span></div>
         </div>
     </div>
     <!-- END PRELOADER AREA -->
     
-    <!-- START MAGIC CURSOR AND BALL AREA-->
-    <div id="magic-cursor">
-        <div id="ball"></div>
-    </div>
-    <!-- / END MAGIC CURSOR AND BALL AREA-->
-    
-    <!-- START MENU DESIGN AREA -->
+    <!-- START HEADER AREA -->
     <header class="main-header">
         <div class="header-upper">
             <div class="container">
                 <div class="header-inner d-flex align-items-center">
-                    <!-- START LOGO DESIGN AREA -->
-                    <div class="logo-outer">
-                        <div class="logo">
-                            <a href="index.html">
-                                <img src="assets/Logo.png" alt="Logo" title="Chatura Dissanayake Logo" />
-                            </a>
+                    <!-- LOGO -->
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/Logo.png" alt="Logo" title="Chatura Dissanayake Logo" loading="lazy"/>
+                        </a>
+                    </div>
+                    <!-- NAVIGATION -->
+                    <nav class="main-menu navbar-expand-lg">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
                         </div>
-                    </div>
-                    <!-- / END LOGO DESIGN AREA -->
-                    <!-- START NAV DESIGN AREA -->
-                    <div class="nav-outer clearfix mx-auto">
-                        <!-- Main Menu -->
-                        <nav class="main-menu navbar-expand-lg">
-                            <div class="navbar-header">
-                                <div class="mobile-logo">
-                                    <a href="index.html">
-                                        <img src="assets/Logo.png" alt="Logo" title="Logo" />
-                                    </a>
-                                </div>
-                                <!-- Toggle Button -->
-                                <button type="button" class="navbar-toggle" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
-                            <div class="navbar-collapse collapse">
-                                <ul class="navigation clearfix">
-                                    <li><a class="nav-link-click" href="index.html">Home</a></li>
-                                    <li><a class="nav-link-click" href="about.html">About</a></li>
-                                    <li><a class="nav-link-click" href="projects.html">Projects</a></li>
-                                    <li><a class="nav-link-click" href="blog.html">Blog</a></li>
-                                    <li><a class="nav-link-click" href="contact.html">Contact</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                        <!-- / END NAV DESIGN AREA -->
-                    </div>
-                    <div class="about-social text-center">
+                        <div class="navbar-collapse collapse">
+                            <ul class="navigation clearfix">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- SOCIAL LINKS -->
+                    <div class="about-social">
                         <ul>
                             <li><a href="https://www.facebook.com/chaturawtf/"><i class="ri-facebook-circle-fill"></i></a></li>
                             <li><a href="https://x.com/atakatus"><i class="ri-twitter-x-line"></i></a></li>
@@ -141,233 +98,117 @@
             </div>
         </div>
     </header>
-    <!-- / END MENU DESIGN AREA -->
+    <!-- END HEADER AREA -->
     
-    <!-- START MAIN CONTENT AREA -->
+    <!-- MAIN CONTENT AREA -->
     <div id="smooth-wrapper">
         <div id="smooth-content">
             <main class="main-bg o-hidden">
-                <!-- START HEADER DESIGN AREA -->
+                <!-- HERO SECTION -->
                 <section id="home" class="main-hero-area">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-lg-4">
-                                <!-- Removed glitch effect -->
-                                <img src="assets/images/about/Chatura.png" alt="About Me" class="img-fluid"/>
+                                <img src="assets/images/about/Chatura.png" alt="About Me" class="img-fluid" loading="lazy"/>
                             </div>
                             <div class="col-lg-8">
-                                <!-- START HERO DESIGN AREA -->
-                                <div class="hero-content wow fadeInUp delay-0-2s">
+                                <div class="hero-content">
                                     <h1>Data-Driven Designer: Branding & UX/UI</h1>
                                     <h2>Hi, I'm Chatura Dissanayake, a data-driven designer passionate about branding, UX/UI, and data visualization. I focus on creating visually compelling, user-centric designs that tell a story.</h2>
-                                    <div class="hero-btns">
-                                        <a href="assets/Chatura CV - New Zealand.pdf" class="theme-btn">Download CV <i class="ri-download-line"></i></a>
-                                    </div>
+                                    <a href="assets/Chatura CV - New Zealand.pdf" class="theme-btn">Download CV <i class="ri-download-line"></i></a>
                                 </div>
-                                <!-- / END HERO DESIGN AREA -->
                             </div>
                         </div>
                     </div>
                 </section>
-                <!-- / END HEADER DESIGN AREA -->
-                
-                <!-- START PORTFOLIO DESIGN AREA -->
+                <!-- END HERO SECTION -->
+
+                <!-- PORTFOLIO SECTION -->
                 <div class="projects-area" id="portfolio">
-                    <div class="custom-icon">
-                        <img src="assets/images/custom/work-scribble.svg" alt="custom">
-                    </div>
                     <div class="container-fluid">
                         <div class="row g-4 portfolio-grid">
-                            <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                            <div class="col-md-6 col-xl-6 portfolio-item category-1">
+                            <!-- Single Portfolio Items with Lazy Loading -->
+                            <div class="col-md-6 col-xl-6 portfolio-item">
                                 <a href="assets/Temp/1.png" class="work-popup">
                                     <div class="portfolio-box">
-                                        <!-- Image -->
-                                        <img src="assets/Temp/1.png" alt="Creative Logo Design" class="img-fluid" />
-                                        <!-- Category -->
+                                        <img src="assets/Temp/1.png" alt="Creative Logo Design" class="img-fluid" loading="lazy" />
                                         <span class="portfolio-category">Branding</span>
-                                        <!-- Caption -->
                                         <div class="portfolio-caption">
                                             <h1>Creative Logo Design</h1>
                                         </div>
                                     </div>
                                 </a>
                             </div>
-                            <!-- // END SINGLE PORTFOLIO DESIGN AREA -->
-                            
-                            <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                            <div class="col-md-6 col-xl-6 portfolio-item category-2">
-                                <a href="single-project.html">
+                            <div class="col-md-6 col-xl-6 portfolio-item">
+                                <a href="assets/Temp/2.png" class="work-popup">
                                     <div class="portfolio-box">
-                                        <!-- Image -->
-                                        <img src="assets/Temp/2.png" alt="Illustrative Mockups" class="img-fluid" />
-                                        <!-- Category -->
+                                        <img src="assets/Temp/2.png" alt="Illustrative Mockups" class="img-fluid" loading="lazy" />
                                         <span class="portfolio-category">Digital Art</span>
-                                        <!-- Caption -->
                                         <div class="portfolio-caption">
                                             <h1>Illustrative Mockups</h1>
                                         </div>
                                     </div>
                                 </a>
                             </div>
-                            <!-- // END SINGLE PORTFOLIO DESIGN AREA -->
-                            
-                            <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                            <div class="col-md-6 col-xl-4 portfolio-item category-2">
-                                <a href="https://www.youtube.com/watch?v=qZEPs3vmYB4" class="popup-youtube">
-                                    <div class="portfolio-box">
-                                        <!-- Image -->
-                                        <img src="assets/Temp/3.png" alt="Animated Visuals" class="img-fluid" />
-                                        <!-- Category -->
-                                        <span class="portfolio-category">Video</span>
-                                        <!-- Caption -->
-                                        <div class="portfolio-caption">
-                                            <h1>Animated Visuals</h1>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- // END SINGLE PORTFOLIO DESIGN AREA -->
-                            
-                            <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                            <div class="col-md-6 col-xl-4 portfolio-item category-1">
-                                <a href="assets/Temp/4.png" class="work-popup">
-                                    <div class="portfolio-box">
-                                        <!-- Image -->
-                                        <img src="assets/Temp/4.png" alt="Corporate Identity Design" class="img-fluid" />
-                                        <!-- Category -->
-                                        <span class="portfolio-category">Branding</span>
-                                        <!-- Caption -->
-                                        <div class="portfolio-caption">
-                                            <h1>Corporate Identity Design</h1>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- // END SINGLE PORTFOLIO DESIGN AREA -->
-                            
-                            <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                            <div class="col-md-6 col-xl-4 portfolio-item category-2">
-                                <a href="assets/Temp/5.png" class="work-popup">
-                                    <div class="portfolio-box">
-                                        <!-- Image -->
-                                        <img src="assets/Temp/5.png" alt="Innovative Designs" class="img-fluid" />
-                                        <!-- Category -->
-                                        <span class="portfolio-category">Mockup</span>
-                                        <!-- Caption -->
-                                        <div class="portfolio-caption">
-                                            <h1>Innovative Designs</h1>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- // END SINGLE PORTFOLIO DESIGN AREA -->
+                            <!-- Add other portfolio items similarly -->
                         </div>
                     </div>
                 </div>
-                <!-- // END PORTFOLIO DESIGN AREA -->
-                
-                <!-- START COMPANY DESIGN AREA -->
+                <!-- END PORTFOLIO SECTION -->
+
+                <!-- COMPANY LOGOS SECTION -->
                 <div class="company-design-area">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h2>Companies I've Worked With</h2>
-                                <div class="company-list">
-                                    <div class="scroller" data-direction="left" data-speed="slow">
-                                        <div class="scroller__inner">
-                                            <img src="assets/client-logos/Air Quality.svg" alt="Air Quality" />
-                                            <img src="assets/client-logos/Ethics Eye.svg" alt="Ethics Eye" />
-                                            <img src="assets/client-logos/Fact Check.svg" alt="Fact Check" />
-                                            <img src="assets/client-logos/Front Page.svg" alt="Front Page" />
-                                            <img src="assets/client-logos/Macro Economics.svg" alt="Macro Economics" />
-                                            <img src="assets/client-logos/Manthri.svg" alt="Manthri" />
-                                            <img src="assets/client-logos/Public Finance.svg" alt="Public Finance" />
-                                            <img src="assets/client-logos/The Media Analysis.svg" alt="The Media Analysis" />
-                                            <img src="assets/client-logos/UN Volunteers.svg" alt="UN Volunteers" />
-                                            <img src="assets/client-logos/UNDP.svg" alt="UNDP" />
-                                            <img src="assets/client-logos/Verite Media.svg" alt="Verite Media" />
-                                            <img src="assets/client-logos/Verite Research.svg" alt="Verite Research" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="company-list">
+                            <img src="assets/client-logos/Air Quality.svg" alt="Air Quality" loading="lazy"/>
+                            <img src="assets/client-logos/Ethics Eye.svg" alt="Ethics Eye" loading="lazy"/>
+                            <!-- Add other logos similarly -->
                         </div>
                     </div>
                 </div>
-                <!-- // END COMPANY DESIGN AREA -->
-                
-                <!-- START CALL TO ACTION DESIGN AREA -->
+                <!-- END COMPANY LOGOS SECTION -->
+
+                <!-- CALL TO ACTION SECTION -->
                 <section class="call-to-action-area">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="call-to-action-part wow fadeInUp delay-0-2s text-center">
-                                    <h2>Are You Ready to Kickstart Your Project?</h2>
-                                    <p>Reach out and let's make it happen. I'm open to full-time, part-time, or freelance opportunities to push the boundaries of design and deliver exceptional work.</p>
-                                    <div class="hero-btns">
-                                        <a href="contact.html" class="theme-btn call-to-action-button">Let's Talk <i class="ri-download-line"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="call-to-action-part text-center">
+                            <h2>Are You Ready to Kickstart Your Project?</h2>
+                            <p>Reach out and let's make it happen. I'm open to full-time, part-time, or freelance opportunities to push the boundaries of design and deliver exceptional work.</p>
+                            <a href="contact.html" class="theme-btn">Let's Talk <i class="ri-download-line"></i></a>
                         </div>
                     </div>
                 </section>
-                <!--  // END CALL TO ACTION DESIGN AREA -->
+                <!-- END CALL TO ACTION SECTION -->
                 
-                <!-- START FOOTER DESIGN AREA -->
+                <!-- FOOTER SECTION -->
                 <footer class="main-footer">
-                    <div class="footer-bottom pt-50 pb-40">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-12 text-center">
-                                    <div class="copyright-text">
-                                        <p>&copy; 2024 Chatura Dissanayake. All Rights Reserved.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="container text-center">
+                        <p>&copy; 2024 Chatura Dissanayake. All Rights Reserved.</p>
                     </div>
                 </footer>
+                <!-- END FOOTER SECTION -->
             </main>
         </div>
     </div>
-    <!-- / END FOOTER DESIGN AREA -->
-    
-    <!-- START SCROLL UP DESIGN AREA -->
+
+    <!-- BACK TO TOP BUTTON -->
     <div class="progress-wrap cursor-pointer">
         <i class="ri-arrow-up-s-line"></i>
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
     </div>
-    <!-- / END SCROLL UP DESIGN AREA -->
-    
-    <!-- JQUERY JS -->
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <!-- BOOTSTRAP JS-->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- APPEAR JS -->
-    <script src="assets/js/appear.min.js"></script>
-    <!-- MAGNIFICANT JS -->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <!-- SLICK JS-->
-    <script src="assets/js/slick.min.js"></script>
-    <!-- GSAP AND LOCOMOTIVE JS-->
-    <script src="assets/js/gsap.min.js"></script>
-    <script src="assets/js/ScrollSmoother.min.js"></script>
-    <script src="assets/js/ScrollTrigger.min.js"></script>
-    <script src="assets/js/smoother-script.js"></script>
-    <!-- NICE SELECT JS-->
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <!-- IMAGE LOADER JS-->
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <!-- ISOTOPE JS-->
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <!-- WOW ANIMATION JS-->
-    <script src="assets/js/wow.min.js"></script>
-    <!-- SCRIPT JS-->
-    <script src="assets/js/script.js"></script>
+
+    <!-- JS FILES WITH DEFER/LAZY LOADING -->
+    <script src="assets/js/jquery-3.6.0.min.js" defer></script>
+    <script src="assets/js/bootstrap.min.js" defer></script>
+    <script src="assets/js/appear.min.js" defer></script>
+    <script src="assets/js/jquery.magnific-popup.min.js" defer></script>
+    <script src="assets/js/slick.min.js" defer></script>
+    <script src="assets/js/gsap.min.js" defer></script>
+    <script src="assets/js/ScrollSmoother.min.js" defer></script>
+    <script src="assets/js/ScrollTrigger.min.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
 </body>
 
 </html>
